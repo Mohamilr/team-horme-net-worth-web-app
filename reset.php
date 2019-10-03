@@ -13,8 +13,7 @@ include("process/forgot_password_process.php");
 	<title>Reset Password page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="shortcut icon" href="./images/netbar.jpg" type="image/x-icon">
     <br>
     <style type="text/css">
     /* styled using Bootstrap 4 and Max CDN */
@@ -142,6 +141,8 @@ include("process/forgot_password_process.php");
                     
                     <div class="text-center small footer">Not yet Registered? <a href="index.php" class="bottom_signup"> <a href="index.php">Sign in/Sign up</a></div>
 </form>
-	</div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 	</body>
 	</html>

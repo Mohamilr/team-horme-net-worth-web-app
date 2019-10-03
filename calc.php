@@ -26,7 +26,9 @@ if(!$_SESSION['calcuser']){
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
         crossorigin="anonymous"
       />
-        <link rel="stylesheet" href="main.css" />
+        <link rel="stylesheet" href="./Assets/css/main.css" />
+        <!-- favicon -->
+        <link rel="shortcut icon" href="./images/netbar.jpg" type="image/x-icon">
     </head>
     <body>
         <!-- Sign-in page -->
@@ -69,6 +71,7 @@ if(!$_SESSION['calcuser']){
                       </div>
                     </li>
                   </ul>
+        <a class="text-light font-weight-bold link" href="dashboard.php">Dashboard</a>
                   <a class="text-light font-weight-bold" href="logout.php">Sign out</a>
           </nav>
         <div class="container-fluid" style="background-color: rgb(65, 89, 94)">
@@ -203,9 +206,9 @@ if(!$_SESSION['calcuser']){
             </div>
         </div>
         
-        <script src="./calculator.js"></script>
+        <script src="./Assets/js/calculator.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script src="./calc.js"></script>
+        <script src="./Assets/js/calc.js"></script>
     </body>
 </html>
