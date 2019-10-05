@@ -37,7 +37,7 @@ function newAssetField() {
                 name="value"
                 id="asset${formLength}"
                 placeholder="Asset${formLength + 1}"
-                class="p-4 form-control form-control-lg pl-5"
+                class="p-4 form-control form-control-lg pl-5 asset-name"
             />
         </div>
     `
@@ -52,7 +52,7 @@ function newAssetField() {
                 id="asset-value${formLength}"
                 placeholder=" ASSET ${formLength + 1} monetary worth"
                 onchange="updateTotalAsset()"
-                class="p-4 asset-value form-control form-control-lg pl-5"
+                class="p-4 form-control asset-value form-control-lg pl-5"
                 required
             />
         </div>
@@ -77,7 +77,7 @@ function newLiabilityField() {
                 name="value"
                 id="liability${formLength}"
                 placeholder="Liability${formLength + 1}"
-                class="p-4 form-control form-control-lg pl-5"
+                class="p-4 form-control form-control-lg pl-5 liability-name"
             />
         </div>
     `
@@ -92,7 +92,7 @@ function newLiabilityField() {
                 id="liability-value${formLength}"
                 placeholder=" LIABILITY ${formLength + 1} monetary worth"
                 onchange="updateTotalLiability()"
-                class="p-4 asset-value liability-value form-control form-control-lg pl-5"
+                class="p-4 form-control liability-value form-control-lg pl-5"
                 required
             />
         </div>
@@ -139,3 +139,53 @@ function updateNetWorth() {
     totalNetWorth.innerHTML = parseFloat(assets) - parseFloat(liabilities);
 }
 
+
+// save 
+const saveBtn = document.querySelector('#save');
+const assetNames = document.querySelectorAll('.asset-name');
+const assetValues = document.querySelectorAll('.asset-value');
+// 
+const liabilityNames = document.querySelectorAll('.liability-name');
+const liabilityValues = document.querySelectorAll('.liability-value')
+ 
+const assetHistory = [];
+const liabilityHistory = [];
+
+saveBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+    
+    // asset names
+    assetNames.forEach(assetName => {
+        assetHistory.push({
+            assetName: assetName.value,
+            date: new Date().toLocaleString()
+        })
+    })
+
+    // asset values
+    assetValues.forEach(assetValue => {
+        assetHistory.push({
+            assetValue: assetValue.value,
+            date: new Date().toLocaleString()
+        })
+    })
+
+    // liability names
+    liabilityNames.forEach(liabilityName => {
+        liabilityHistory.push({
+            liabilityName: liabilityName.value,
+            date: new Date().toLocaleString()
+        })
+    })
+
+    // liability values
+    liabilityValues.forEach(liabilityValue => {
+        liabilityHistory.push({
+            liabilityValue: liabilityValue.value,
+            date: new Date().toLocaleString() 
+        })
+    })
+
+    console.log(assetHistory);
+    console.log(liabilityHistory);
+})
